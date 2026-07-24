@@ -1,8 +1,5 @@
-
-
-
 name = {
-    "Nombre": ["Mario","Alberto","Armando","licho"]
+    "Name": ["Mario", "Alberto", "Armando", "licho"]
 }
 
-print(name["Nombre"][0],"y", name["Nombre"][3] )  # Mario
+print(name["Name"][0], "and", name["Name"][3])

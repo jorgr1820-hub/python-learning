@@ -7,29 +7,24 @@
 #for index in range(0, len(my_favorite_records)):
 #	record = my_favorite_records[index]
 #	print(f'Record {index}: {record}')
-#	
 
 
-
-
-
-#turcas = [
-#		"Una Turca", 
-#		"Dos Turcas",
-#		"Sigan Viendo....",
+#drinks = [
+#		"One Drink",
+#		"Two Drinks",
+#		"Keep watching....",
 #   ]
 
-#for catidad_turcas in turcas:
-#	print(f"Tome su turca: {catidad_turcas}")
-#	
+#for drink in drinks:
+#	print(f"Here is your drink: {drink}")
 
 
-#turcas = [
-#		"Una Turca", 
-#		"Dos Turcas",
-#		"Sigan Viendo....",
+#drinks = [
+#		"One Drink",
+#		"Two Drinks",
+#		"Keep watching....",
 #    ]
 
-#for position in range(0,len(turcas)):
-#    turca_list = turcas[position]
-#     print(f"Tome su turca:{position}: {turca_list}")
+#for position in range(0,len(drinks)):
+#    drink_list = drinks[position]
+#    print(f"Drink {position}: {drink_list}")

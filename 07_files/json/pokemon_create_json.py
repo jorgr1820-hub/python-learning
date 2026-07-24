@@ -2,7 +2,7 @@ import json
 
 def write_json_file(pokemon_list):
     with open(
-        "/Users/jordan.guzman/python/manejo_de_archivos_json/pokemon.json",
+        "/Users/jordan.guzman/python/07_files/json/pokemon.json",
         "w"
     ) as json_pokemon:
         json.dump(pokemon_list, json_pokemon, indent=4)

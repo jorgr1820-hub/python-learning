@@ -88,7 +88,7 @@
 #for n in range(1,len(nums)):
 #    if n < menor:
 #        menor = nums[n]
-#print(f"El numero menor es {n}")
+#print(f"The lowest number is {n}")
 
 ######################################################################
 

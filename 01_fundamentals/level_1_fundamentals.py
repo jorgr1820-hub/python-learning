@@ -1,15 +1,10 @@
-#Nivel 1 – Fundamentos
-#Ejercicio 1: Variables y tipos
-#Crea un programa que pida el nombre y la edad del usuario, y muestre un mensaje indicando la edad
-#que tendrá el próximo año.
-#Ejercicio 2: Condicionales
-#Pide un número al usuario y muestra si es positivo, negativo o cero.
+# Level 1 - Fundamentals
+# Exercise 1: Variables and types
+# Create a program that asks for the user's name and age,
+# and shows a message indicating the age they will be next year.
+# Exercise 2: Conditionals
+# Ask the user for a number and show if it is positive, negative, or zero.
 
-
-
-
-
-nombre = input("Cual es su nombre")
-edad = int(input("Cual es su edad?:"))
-print(f"{nombre},su edad es {edad+1} el proximo ano")
-
+name = input("What is your name? ")
+age = int(input("What is your age?: "))
+print(f"{name}, your age will be {age + 1} next year")

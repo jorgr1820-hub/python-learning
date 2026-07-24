@@ -1,5 +1,5 @@
-#Cree un programa que lea nombres de canciones de un archivo (línea por línea) 
-#y guarde en otro archivo los mismos nombres ordenados alfabéticamente.
+# Create a program that reads song names from a file (line by line)
+# and saves the same names sorted alphabetically into another file.
 
 
 
@@ -62,6 +62,6 @@ with open("songs_sorted.txt", "w") as new_file:
     for line in sorted_songs:
         new_file.write(line)
 
-print("Archivo ordenado creado correctamente")
+print("Sorted file created successfully.")
 
-print(f"Contenido del archivo ordenado:\n{sorted_songs}")
+print(f"Content of the sorted file:\n{sorted_songs}")

@@ -1,6 +1,6 @@
-#Convertí "a,b,c,d" en ["a","b","c","d"].
-#Convertí "1 2 3 4" en [1,2,3,4] (números).
-#Contá cuántas veces aparece cada letra en "banana" usando un diccionario.
+# Convert "a,b,c,d" into ["a","b","c","d"].
+# Convert "1 2 3 4" into [1,2,3,4] (numbers).
+# Count how many times each letter appears in "banana" using a dictionary.
 
 
 
@@ -17,7 +17,7 @@
 #    else:
 #        word += char
 
-# importante agregar el último elemento
+# important: append the last element
 #result.append(word)
 
 #print(result)
@@ -48,7 +48,6 @@
 #    if letter in l_count:
 #        l_count[letter] += 1
 #    else:
-#        l_count[letter] = 1 
+#        l_count[letter] = 1
 
 #print(l_count)
-

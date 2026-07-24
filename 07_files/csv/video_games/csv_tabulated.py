@@ -1,57 +1,50 @@
-####################################################################
-#Lea sobre el resto de métodos del módulo csv aqui y cree una version alternativa del ejercicio de arriba que guarde el archivo 
-#separado por tabulaciones en vez de por comas.
+# Read about the rest of the csv module methods and create an alternative version
+# of the exercise above that saves the file separated by tabs instead of commas.
 
 import csv
-videojuegos = []
 
-def pedir_cantidad_videojuegos():
+CSV_PATH = "/Users/jordan.guzman/python/07_files/csv/video_games/video_game_tabulated.csv"
+
+video_games = []
+
+
+def ask_quantity():
     while True:
         try:
-            cantidad = int(input("Ingrese la cantidad de videojuegos que desea agregar: "))
-            if cantidad > 0:
-                return cantidad
+            quantity = int(input("Enter the number of video games to add: "))
+            if quantity > 0:
+                return quantity
             else:
-                print("Ingrese un número mayor a 0.")
+                print("Please enter a number greater than 0.")
         except ValueError:
-            print("Por favor, ingrese un número válido.")
+            print("Please enter a valid number.")
 
 
-def pedir_info_videojuego():
-    nombre = input("Ingrese el nombre del videojuego:")
-    genero = input("Ingrese el género del videojuego:")
-    desarrollador = input("Ingrese el desarrollador del videojuego:")
-    clasificacion = input("Ingrese la clasificacion del videojuego:")
-    return {"Nombre": nombre,
-        "Género": genero,
-        "Desarrollador": desarrollador,
-        "Clasificación ESRB": clasificacion}
+def ask_game_info():
+    name = input("Enter the game name: ")
+    genre = input("Enter the game genre: ")
+    developer = input("Enter the game developer: ")
+    rating = input("Enter the ESRB rating: ")
+    return {
+        "Name": name,
+        "Genre": genre,
+        "Developer": developer,
+        "Rating": rating
+    }
 
 
-cantidad_videojuegos = pedir_cantidad_videojuegos()
-for x in range(cantidad_videojuegos):
-    print(f"\nIngrese la información del videojuego {x + 1}:")
-    videojuego = pedir_info_videojuego()
-    videojuegos.append(videojuego) 
+quantity = ask_quantity()
+for x in range(quantity):
+    print(f"\nEnter information for video game {x + 1}:")
+    game = ask_game_info()
+    video_games.append(game)
 
 
-with open("videojuego_tabulado.csv", "w", newline="") as csvfile:
-    fieldnames = ["Nombre", "Genero", "Desarrollador", "Clasificacion"]
+with open(CSV_PATH, "w", newline="") as csvfile:
+    fieldnames = ["Name", "Genre", "Developer", "Rating"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter="\t")
     writer.writeheader()
-    for videojuego in videojuegos:
-        writer.writerow({
-            "Nombre": videojuego["Nombre"],
-            "Genero": videojuego["Género"],
-            "Desarrollador": videojuego["Desarrollador"],
-            "Clasificacion": videojuego["Clasificación ESRB"]
-        })
-print("\nInformación de videojuegos guardada en videojuego.csv")
+    for game in video_games:
+        writer.writerow(game)
 
-
-
-
-
-
-
-
+print("\nVideo game information saved to video_game_tabulated.csv")

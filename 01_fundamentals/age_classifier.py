@@ -1,69 +1,60 @@
-#Programa que pide nombre edad, y luego muestra un mensaje personalizado
-#Clasificacion segun rangos de edad 
-#Adulto mayor: 65 años o mas
-#Adulto: 18 a 64 años
-#Menores de edad: 13 a 17 años
-#Niño: 0 a 12 años
+# Program that asks for a name and age, then shows a personalized message.
+# Age classification by range:
+# Senior: 65 years or older
+# Adult: 18 to 64 years
+# Teenager: 13 to 17 years
+# Child: 0 to 12 years
 
-def validar_edad():
+def validate_age():
     while True:
         try:
-            edad = int(input("Ingrese su edad: "))
-            if edad < 0:
-                print("La edad no puede ser negativa. Por favor, ingrese una edad válida.")
+            age = int(input("Enter your age: "))
+            if age < 0:
+                print("Age cannot be negative. Please enter a valid age.")
             else:
-                return edad
+                return age
         except ValueError:
-            print("Por favor, ingrese un número válido.")
-#Validamos que la edad sea un numero valido y positivo.
+            print("Please enter a valid number.")
 
-def validar_nombre():
+
+def validate_name():
     while True:
-        nombre = input("Ingrese su nombre:").strip()
-        if nombre == "":
-            print("El nombre no puede estar vacío. Por favor, ingrese un nombre válido.")
-        else: 
-            return nombre
-#Validamos que el nombre no este vacio o solo contenga espacios en blanco.
+        name = input("Enter your name: ").strip()
+        if name == "":
+            print("Name cannot be empty. Please enter a valid name.")
+        else:
+            return name
 
 
+def classify_age(age):
+    if age < 13:
+        return "Child"
+    elif age >= 65:
+        return "Senior"
+    elif age >= 18:
+        return "Adult"
+    else:
+        return "Teenager"
 
 
-def clasificador_edad(edad):
-    if edad < 13:
-        return "Niño"
-    elif edad >= 13:
-        return "Menor de edad"
-    elif edad >= 18:
-        return "Adulto"
-    elif edad >= 65:
-        return "Adulto mayor"
-#Clasificamos la edad segun los rangos establecidos entre adulto mayor, adulto, menor de edad y niño.
-
-
-def breakpoint():
+def ask_again():
     while True:
-        opcion = input("¿Desea ingresar otra edad? (s/n): ").lower().upper()
-        if opcion == 's' or opcion == 'S':
-            edad()
-        elif opcion == 'n' or opcion == 'N':
-            print("Gracias por usar el programa. ¡Hasta luego!")
+        option = input("Do you want to enter another age? (y/n): ").lower()
+        if option == 'y':
+            run()
+        elif option == 'n':
+            print("Thank you for using the program. Goodbye!")
             break
         else:
-            print("Opción no válida. Por favor, ingrese 's' para sí o 'n' para no.")
-#Funcion que pregunta al usuario si desea ingresar otra edad, y dependiendo de la respuesta, llama a la funcion edad() nuevamente 
-# o finaliza el programa.
+            print("Invalid option. Please enter 'y' for yes or 'n' for no.")
 
 
-def edad():
-    edad = 0
-    nombre = validar_nombre()
-    edad = validar_edad()
-    clasificacion = clasificador_edad(edad)
-    print(f"Hola {nombre}, tu clasificación de edad es: {clasificacion}")
-    breakpoint()
-#Funcion principal que llama a las funciones de validacion y clasificacion, y muestra el mensaje personalizado 
-# con el nombre y la clasificacion de edad.
+def run():
+    name = validate_name()
+    age = validate_age()
+    classification = classify_age(age)
+    print(f"Hello {name}, your age classification is: {classification}")
+    ask_again()
 
 
-edad()
+run()

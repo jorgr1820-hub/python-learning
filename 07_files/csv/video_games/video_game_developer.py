@@ -1,48 +1,49 @@
 import csv
 
-
-def read_CSV_file():
-    with open("/Users/jordan.guzman/python/manejo_archivos/video_juegos/videojuego.csv", "r", newline="") as csv_video_juego:
-        lector = csv.DictReader(csv_video_juego)
-        return list(lector)
+CSV_PATH = "/Users/jordan.guzman/python/07_files/csv/video_games/video_game.csv"
 
 
-def validar_break(mensaje):
+def read_csv_file():
+    with open(CSV_PATH, "r", newline="") as csv_file:
+        reader = csv.DictReader(csv_file)
+        return list(reader)
+
+
+def confirm_continue(message):
     while True:
-        respuesta = input(mensaje).strip().upper()
-        if respuesta in ["S", "SI"]:
+        answer = input(message).strip().upper()
+        if answer in ["Y", "YES"]:
             return True
-        elif respuesta in ["N", "NO"]:
+        elif answer in ["N", "NO"]:
             return False
         else:
-            print("Respuesta no válida")
+            print("Invalid answer.")
 
 
-def buscar_por_desarrollador():
-    videojuegos = read_CSV_file()
-    desarrollador_usuario = input(
-        "Ingrese el nombre del desarrollador: ").strip().upper()
-    encontrados = []
-    for juego in videojuegos:
-        if juego["Desarrollador"].strip().upper() == desarrollador_usuario:
-            encontrados.append(juego)
-    if len(encontrados) > 0:
-        print(f"\nVideojuegos desarrollados por {desarrollador_usuario}:")
-        for juego in encontrados:
+def search_by_developer():
+    games = read_csv_file()
+    developer_input = input("Enter the developer name: ").strip().upper()
+    found = []
+    for game in games:
+        if game["Developer"].strip().upper() == developer_input:
+            found.append(game)
+    if len(found) > 0:
+        print(f"\nVideo games developed by {developer_input}:")
+        for game in found:
             print(
-                f"- {juego['Nombre']} "
-                f"(Clasificación: {juego['Clasificacion']}, "
-                f"Género: {juego['Genero']})" )
+                f"- {game['Name']} "
+                f"(Rating: {game['Rating']}, "
+                f"Genre: {game['Genre']})"
+            )
     else:
-        print("No se encontraron videojuegos para ese desarrollador.")
+        print("No video games found for that developer.")
 
 
 def main():
     while True:
-        buscar_por_desarrollador()
-        if not validar_break(
-            "\n¿Desea buscar otro desarrollador? Si|No: "):
-            print("Gracias por usar el programa.")
+        search_by_developer()
+        if not confirm_continue("\nSearch another developer? Yes | No: "):
+            print("Thank you for using the program.")
             break
 
 

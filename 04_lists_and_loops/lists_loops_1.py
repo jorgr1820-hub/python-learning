@@ -1,12 +1,12 @@
-# Listas + loops + menor sin min()
+# Lists + loops + find minimum without min()
 
-#Dada nums = [4, -2, 7, 0], encontrá el menor usando un loop (incluye negativos y 0).
+# Given nums = [4, -2, 7, 0], find the lowest using a loop (includes negatives and 0).
 
-#Encontrá el mayor sin max().
+# Find the highest without max().
 
-#Contá cuántos son positivos, negativos y ceros (en 3 contadores, sin listas extra).
+# Count how many are positive, negative, and zero (using 3 counters, no extra lists).
 
-#Sacá el promedio (media) sin usar librerías.
+# Calculate the average without using libraries.
 
 nums = [4, -2, 7, ]
 num_lowest = nums[0]
@@ -18,29 +18,28 @@ for index in nums:
         num_highest = index
 
 
-possitive = 0
+positive = 0
 negative = 0
-ceros = 0 
+zeros = 0
 for x in nums:
     if x == 0:
-        ceros += 1 
+        zeros += 1
     elif x > 0:
-        possitive += 1 
+        positive += 1
     else:
-        negative += 1         
+        negative += 1
 
 
-total = 0 
+total = 0
 for t in nums:
     total += t
 
 
-media = total / len(nums)
+average = total / len(nums)
 
 
-
-print(f"The lowest number is: {num_lowest} and the hights is:{num_highest}")
-print (f"The total of positive is: {possitive}")
-print (f"The total of negative is: {negative}")
-print (f"The total of ceros is: {ceros}")
-print(f"The media is:{media}")
+print(f"The lowest number is: {num_lowest} and the highest is: {num_highest}")
+print(f"The total of positive is: {positive}")
+print(f"The total of negative is: {negative}")
+print(f"The total of zeros is: {zeros}")
+print(f"The average is: {average}")

@@ -1,10 +1,9 @@
-#Contar cuántos:
-#tengan solo letras
-#longitud >= 3
+# Count how many names:
+# have only letters
+# have length >= 3
 
 
-nombres = ["Juan", "Ana", "Luis", "Al", "Pedro123"]
+names = ["Juan", "Ana", "Luis", "Al", "Pedro123"]
 
-
-resultado = sum(1 for n in nombres if n.isalpha() and len(n) >= 3)
-print (resultado)
+result = sum(1 for n in names if n.isalpha() and len(n) >= 3)
+print(result)

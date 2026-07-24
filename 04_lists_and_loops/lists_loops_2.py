@@ -1,7 +1,7 @@
-#Imprimí del 1 al 10 usando range.
-#Imprimí del 10 al 1 usando range con paso negativo.
-#Imprimí solo los pares del 0 al 20.
-#Dado un string s = "Pizza con piña", imprimí los índices y caracteres: 0:P, 1:i,
+# Print from 1 to 10 using range.
+# Print from 10 to 1 using range with a negative step.
+# Print only even numbers from 0 to 20.
+# Given a string s = "Pizza con piña", print the indexes and characters: 0:P, 1:i, ...
 
 
 for index in range(10 + 1):
@@ -23,5 +23,3 @@ s = "Pizza con piña"
 indexes = [0,1]
 for i in indexes:
     print(f"{i}:{s[i]}")
-
-

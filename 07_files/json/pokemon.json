@@ -42,5 +42,10 @@
             "sp_defense": 50,
             "speed": 65
         }
+    },
+    {
+        "name": "Gengar",
+        "type": "Ghost",
+        "level": 42
     }
 ]

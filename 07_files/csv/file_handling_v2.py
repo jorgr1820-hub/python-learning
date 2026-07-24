@@ -1,5 +1,5 @@
-#Cree un programa que lea nombres de canciones de un archivo (línea por línea) 
-#y guarde en otro archivo los mismos nombres ordenados alfabéticamente.
+# Create a program that reads song names from a file (line by line)
+# and saves the same names sorted alphabetically into another file.
 
 
 
@@ -65,4 +65,4 @@ for artist in songs.values():
         count[artist] = 0
     count[artist] += 1     
 
-print(f"La cantidad de canciones por artista es:\n {count}\n")
+print(f"Number of songs per artist:\n {count}\n")

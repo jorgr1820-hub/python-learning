@@ -1,63 +1,42 @@
-#Funciones basicas: Suma
+# Basic functions: Addition
 
-#Variables:
-#valor1_Suma
-#valor2_Suma
-#total_sum
+# Variables:
+# value1_sum
+# value2_sum
+# total_sum
 
+print("Hello! Let's perform our first addition.")
 
-print ("Hola! Vamos a realizar nuestra primer suma")
+# Ask for first value
+value1_sum = int(input("* Enter the first number: "))
+print("Your first value is:", value1_sum)
 
-#Pedir primer valor
-valor1_suma = int(input("* Ingrese el numero: "))
-print ("Su valor es:", valor1_suma)
+# Ask for second value
+value2_sum = int(input("* Enter the second number: "))
+print("Your second value is:", value2_sum)
 
-
-#Pedir Segundo valor
-valor2_suma = int(input(" * Ingrese el segundo valor numero: "))
-print ("Su Segundo valor es:", valor2_suma)
-
-
-#Sumatotal 
-total_sum = valor1_suma + valor2_suma
-print (" Su total es:", total_sum)
+# Total sum
+total_sum = value1_sum + value2_sum
+print("Your total is:", total_sum)
 
 
+# Basic functions: Multiplication
 
+# Variables:
+# value1_mult
+# value2_mult
+# total_mult
 
+print("Hello! Let's perform our first multiplication.")
 
+# Ask for first value
+value1_mult = int(input("* Enter the first number: "))
+print("Your first value is:", value1_mult)
 
+# Ask for second value
+value2_mult = int(input("* Enter the second number: "))
+print("Your second value is:", value2_mult)
 
-
-
-#Funciones basicas: Multiplicación
-
-#Variables:
-#valor1_mult
-#valor2_mult
-#total_mult
-
-
-print ("Hola! Vamos a realizar la primer multiplicación")
-
-#Pedir primer valor
-valor1_mult = int(input("* Ingrese el numero: "))
-print ("Su valor es:", valor1_mult)
-
-
-#Pedir Segundo valor
-valor2_mult = int(input(" * Ingrese el segundo valor numero: "))
-print ("Su Segundo valor es:", valor2_mult)
-
-
-#Sumatotal 
-Total_mult = valor1_mult * valor2_mult
-print (" Su total es:", Total_mult)
-
-
-
-
-
-
-
-
+# Total multiplication
+total_mult = value1_mult * value2_mult
+print("Your total is:", total_mult)

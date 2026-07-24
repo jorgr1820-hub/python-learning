@@ -1,10 +1,10 @@
 
 
-#Escribí is_even(n) que devuelva True/False.
+# Write is_even(n) that returns True/False.
 
-#Escribí swap_first_last(my_list) que intercambie primero y último y funcione con listas de cualquier tamaño.
+# Write swap_first_last(my_list) that swaps the first and last elements for lists of any size.
 
-#Escribí count_primes(limit) que cuente cuántos primos hay de 2 a limit (usando tu is_prime).
+# Write count_primes(limit) that counts how many primes exist from 2 to limit (using your is_prime).
 
 #def is_even(n):
 #    if n % 2 == 0:
@@ -23,7 +23,7 @@
 #def swap_first_last(my_list):
 #    if len(my_list) < 2:
 #        return my_list
-#    
+#
 #    my_list[0], my_list[-1] = my_list[-1], my_list[0]
 #    return my_list
 
@@ -35,7 +35,7 @@
 #for num in user_input.split():
 #    if len(user_input) < 2:
 #        print("Please enter at least two numbers.")
-#    else:    
+#    else:
 #        list_nums.append(int(num))
 
 #result = swap_first_last(list_nums)
@@ -74,8 +74,3 @@
 #    nums_to_add = int(input("\n\nEnter a number to add: "))
 #    result = add_item(nums_to_add,my_list)
 #    print(f"\n\nThe number added is: \n|{nums_to_add}| \n\nand the list is now: \n{result}")
-
-
-
-
-
